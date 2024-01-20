@@ -25,6 +25,10 @@ export class DriversRoutes {
       "/getDriversVehicles/:userId",
       asyncHandler(this.driversController.getDriversVehicles)
     );
+    this._router.get(
+      "/getAllDrivers",
+      asyncHandler(this.driversController.getAllDrivers)
+    );
     this._router.post(
       "/disassociateVehicles/:userId",
       asyncHandler(this.driversController.disassociateVehicles)

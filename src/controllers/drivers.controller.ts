@@ -82,6 +82,10 @@ export class DriversController {
     return { status: true };
   };
 
+  public getAllDrivers = async () => {
+    return await this.driversService.getAllDrivers();
+  };
+
   private validateDriverVehicles = async (
     vehicles: number[],
     userId: number

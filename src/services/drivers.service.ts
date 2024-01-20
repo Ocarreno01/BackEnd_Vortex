@@ -41,4 +41,8 @@ export class DriversService {
     }
     return;
   }
+
+  public async getAllDrivers(): Promise<Driver[]> {
+    return await Driver.findAll();
+  }
 }
