@@ -1,4 +1,10 @@
-CREATE TABLE public.drivers (
+-- Crear la base de datos si no existe
+CREATE DATABASE IF NOT EXISTS vortex_delivery;
+
+-- Conectar a la base de datos
+\c vortex_delivery;
+
+CREATE TABLE IF NOT EXISTS public.drivers (
     id SERIAL PRIMARY KEY,
     identification VARCHAR(11) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
@@ -9,7 +15,7 @@ CREATE TABLE public.drivers (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE public.vehicles (
+CREATE TABLE IF NOT EXISTS public.vehicles (
     id SERIAL PRIMARY KEY,
     model VARCHAR(4) NOT NULL,
     plate VARCHAR(7),
@@ -19,7 +25,7 @@ CREATE TABLE public.vehicles (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE public.orders (
+CREATE TABLE IF NOT EXISTS public.orders (
     id SERIAL PRIMARY KEY,
     order_type VARCHAR(20),
     "address" VARCHAR(50),
@@ -28,7 +34,7 @@ CREATE TABLE public.orders (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE public.parameters (
+CREATE TABLE IF NOT EXISTS public.parameters (
     id SERIAL PRIMARY KEY,
     "name" VARCHAR(50) UNIQUE NOT NULL,
     "value" TEXT,
