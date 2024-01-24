@@ -65,7 +65,7 @@ Este proyecto backend se desarrolló utilizando una combinación de tecnologías
 
 9. **Nodemon:**
 
-   - **Razón:** Nodemon se utiliza para reiniciar automáticamente la aplicación cuando se realizan cambios en el código durante el desarrollo.
+   - **Razón:** Nodemon se utiliza para reiniciar automáticamente la aplicación cuando se realizan cambios en el código durante el desarrollo. **Importante:** Este paquete debe estar instalado de forma global. `npm install -g nodemon`
 
    - **Versión:**
      - Nodemon: ^2.0.14
