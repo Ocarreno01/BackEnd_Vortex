@@ -120,9 +120,5 @@ Este proyecto sigue las mejores prácticas de programación y arquitectura para 
    o si prefieres utilizar nodemon directamente puedes ejecutar el siguiente comando:
 
    ```bash
-   npm run start
-   ```
-
-   ```bash
    nodemon
    ```
